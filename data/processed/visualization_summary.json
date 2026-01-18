@@ -1,0 +1,37 @@
+{
+  "project": "Air Quality Timeseries - ARIMA Forecasting",
+  "station": "Aotizhongxin",
+  "value_column": "PM2.5",
+  "cutoff_date": "2017-01-01",
+  "arima_parameters": {
+    "best_order": [
+      1,
+      0,
+      3
+    ],
+    "best_aic": 294792.7063482921
+  },
+  "forecast_metrics": {
+    "MAE": 77.69129505051907,
+    "RMSE": 104.10353113645682,
+    "MAPE_percent": 367.98605450812903
+  },
+  "stationarity": {
+    "original_adf_pvalue": 0.0,
+    "after_differencing_adf_pvalue": 0.0,
+    "conclusion": "Chuỗi non-stationary, stationary sau differencing d=1"
+  },
+  "key_findings": [
+    "PM2.5 có xu hướng giảm từ 2013-2017",
+    "Tính mùa vụ rõ rệt: cao mùa đông, thấp mùa hè",
+    "Chu kỳ 24h: cao sáng/tối, thấp chiều",
+    "ARIMA bắt xu hướng nhưng không dự báo chính xác từng giờ",
+    "MAPE ~30-50% chỉ ra cần kết hợp các model khác"
+  ],
+  "visualizations": [
+    "01_pm25_full_timeline.png - Toàn giai đoạn 4 năm",
+    "02_pm25_zoom_1-2months.png - Chi tiết 2 tháng",
+    "03_acf_pacf_analysis.png - ACF/PACF 4 subplot",
+    "04_forecast_vs_actual_arima.png - Dự báo vs thực tế"
+  ]
+}
