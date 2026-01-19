@@ -83,4 +83,3 @@ pm.execute_notebook(
     kernel_name=KERNEL,
 )
 
-print("Đã chạy xong pipeline (classification + regression + ARIMA)")
